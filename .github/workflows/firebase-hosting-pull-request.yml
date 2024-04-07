@@ -1,7 +1,9 @@
 name: Deploy to Firebase Hosting on PR
+
 on:
-  repository_dispatch:
-    types: [deploy]
+  pull_request:
+    branches:
+      - main # Adjust the branch name if necessary
 
 jobs:
   build_and_preview:

@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "site": "ramyabhanuwithlokesh",
-    "public": "public",
+    "site": "ramyabhanuwitlokesh",
+    "public": "public", 
     "ignore": [
       "firebase.json",
       "**/.*",

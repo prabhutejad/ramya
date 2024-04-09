@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  lint:
+  lintvalidationanddeploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -14,7 +14,8 @@ jobs:
 
       - name: Run ESLint
         run: |
-          npx eslint --ext .html,.css,.js .
+          npm install eslint eslint-plugin-html --save-dev
+          npx eslint .
 
       - name: Deploy to Firebase Hosting
         if: success()

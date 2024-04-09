@@ -16,7 +16,7 @@ jobs:
         run: npm install -g eslint eslint-plugin-html
 
       - name: Run ESLint
-        run: eslint . --ext .html --ext .css --ignore-path .gitignore
+        run: eslint ./**/*.html ./**/*.css --ignore-path .gitignore
         # Run ESLint on HTML and CSS files and ignore files specified in .gitignore.
 
       - name: Deploy to Firebase Hosting
@@ -27,4 +27,3 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FB_CLONE_FAD57 }}
           channelId: live
           projectId: fb-clone-fad57
-

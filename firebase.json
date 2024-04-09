@@ -11,9 +11,22 @@
       {
         "source": "**",
         "destination": "/index.html"
-        
       }
-      
     ]
+  },
+  "eslintConfig": {
+    "extends": ["eslint:recommended"],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      // Add your custom rules here
+    }
   }
 }
+

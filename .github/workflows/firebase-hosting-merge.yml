@@ -16,7 +16,7 @@ jobs:
         run: npm install -g eslint eslint-plugin-html
 
       - name: Run ESLint
-        run: eslint ./**/*.html ./**/*.css --ignore-path .gitignore
+        run: eslint ./**/*.html ./**/*.css --ignore-pattern .gitignore
         # Run ESLint on HTML and CSS files and ignore files specified in .gitignore.
 
       - name: Deploy to Firebase Hosting

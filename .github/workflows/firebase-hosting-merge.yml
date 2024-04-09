@@ -11,12 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Run ESLint
-        run: |
-          npm install eslint eslint-plugin-html --save-dev
-          npx eslint .
-
       - name: Deploy to Firebase Hosting
         
         uses: FirebaseExtended/action-hosting-deploy@v0

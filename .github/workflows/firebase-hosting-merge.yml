@@ -16,8 +16,8 @@ jobs:
         run: npm install -g eslint
 
       - name: Run ESLint
-        run: eslint . --ext .html,.css
-        # Run ESLint on HTML and CSS files. Adjust the file extensions if needed.
+        run: eslint . --ext .html --ext .css
+        # Run ESLint on HTML and CSS files.
 
       - name: Deploy to Firebase Hosting
         if: success() # Only deploy if ESLint passed

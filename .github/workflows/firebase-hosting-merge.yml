@@ -20,13 +20,13 @@ jobs:
 
       - name: Build
         # Add your build commands here
-
+      - name: validate-license-action
+        uses: datreeio/validate-license-action@v1.0.0
+          
       - name: Archive Production Build
         uses: actions/upload-artifact@v4.3.1
-        with:
-          name: production-build
-          path: ./production
-
+    
+          
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

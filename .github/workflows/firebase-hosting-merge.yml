@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
+
 jobs:
   lint-validation-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: Prod
+  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,8 +20,12 @@ jobs:
           
       - name: Archive Production Build
         uses: actions/upload-artifact@v4.3.1
-    
-          
+
+  Deploy-to-production:
+    runs-on: ubuntu-latest
+    environment:
+      name: Prod  # Fixing the typo here
+    steps:
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

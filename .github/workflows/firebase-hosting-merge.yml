@@ -25,6 +25,8 @@ jobs:
 
   Deploy-to-production:
     runs-on: ubuntu-latest
+    needs: lint-validation-and-deploy
+    if: success()
     environment:
       name: Prod
     steps:

@@ -15,11 +15,6 @@ jobs:
 
       # Add any necessary setup steps here, such as installing dependencies
 
-      - name: Run ESLint
-        # Add your ESLint command here
-
-      - name: Build
-        # Add your build commands here
       - name: validate-license-action
         uses: datreeio/validate-license-action@v1.0.0
           
